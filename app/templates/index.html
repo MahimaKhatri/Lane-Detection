@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+     <!-- loader function -->
+    <div id="loader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+
+      <!-- end of loader -->
+
+  <!-- navbar -->
+  <div class="navbar">
+    <div class="nav">
+      <div class="lane">
+        <a href="{{url_for('home_page')}}">Lane Detection</a>
+      </div>
+        <div class="dev" style="float: right;">
+            <a href="{{url_for('dev_page')}}">Developers</a>
+        </div>
+    </div>
+  </div>
+  <!-- End of Navbar -->
+
+  <div class="section-t">
+  <div class="content">
+    <div class="lane-head">
+      <h1>Lane Detection</h1>
+    </div>
+
+      <div class="lane-head2">
+        <h2>Enter Desired Image/Video</h2>
+      </div>
+
+      <div class="lane-head3">
+        <h5>Choose what transformation you would like to see</h5>
+      </div>
+      <form action="{{url_for('home_page')}}" method="POST" enctype = "multipart/form-data">
+        <div class="drop">
+          <select class="form-control form-control-lg" name="IV">
+            <div class="optional">
+              <option value="Image">Image</option>
+              <option value="Video">Video</option>
+            </div>
+          </select>
+        </div>
+
+        <div>
+          <div class="lane-head4">
+            <h5>Choose Image/Video</h5>
+          </div>
+
+          <div class="drop2">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="customFile" name="file"/>
+              <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="lane-head5">
+            <h5>Choose what you would like to see</h5>
+          </div>
+
+          <div class="drop1">
+            <select class="form-control form-control-lg" name="dis">
+              <option value="org">Original</option>
+              <option value="grey">Grayscale</option>
+              <option value="Gaussian">Gaussian Blur</option>
+              <option value="Canny">Cannyedge</option>
+              <option value="roi">Region of Interest</option>
+              <option value="lanes">Lanes</option>
+              <option value="lanes_with_path">Lanes + path</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit">submit</button>
+      </form>
+
+    <div class="lane-head6">
+      <h4>Here is your Image:</h4>
+      {% if path %}
+        {% if (choice == "Image") %}
+            <img src="{{path}}">
+        {% endif %}
+      {% endif %}
+    </div>
+
+  </div>
+</div>
+
+<!-- loader -->
+  <script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+
+    </script>
+</body>
+</html>
