@@ -81,20 +81,24 @@
               <option value="lanes">Lanes</option>
               <option value="lanes_with_path">Lanes + path</option>
             </select>
+            <button type="submit" class="btn btn-outline-primary btn-block" style="align-items: center; margin-top: 20px;">Submit</button>
+            <div class="lane-head6">
+              <h4>Here is your Image:</h4>
+              {% if path %}
+                {% if (choice == "Image") %}
+                    <img src="{{path}}" style="width: 1200px; height: auto;">
+                {% endif %}
+              {% endif %}
+            </div>
           </div>
         </div>
+<<<<<<< HEAD
         <button type="button" class="btn btn-outline-primary btn-block" style="align-items: center;">Submit</button>
         <button class="btn btn-primary" type="submit" style="align-items: center;" >Button</button>
+=======
+>>>>>>> 372e8bdd2ecf3eaa091d485e8c0d1c4e08cf0c82
       </form>
 
-    <div class="lane-head6">
-      <h4>Here is your Image:</h4>
-      {% if path %}
-        {% if (choice == "Image") %}
-            <img src="{{path}}">
-        {% endif %}
-      {% endif %}
-    </div>
 
   </div>
 </div>
