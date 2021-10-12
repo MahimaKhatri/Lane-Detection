@@ -1,6 +1,6 @@
 # Lane-Detection
 
-Description
+In this project, we will use Computer Vision to recognise lane lines in videos and pictures of roadways. One of the most essential traffic laws is to follow lane lines, therefore identifying them when developing models for autonomous vehicles is a crucial job. 
 
 ## Frontend
 
@@ -8,7 +8,7 @@ Description
 ![alt text](https://github.com/MahimaKhatri/Lane-Detection/blob/master/Images/home.PNG)
 
 ### Developers Page
-
+![alt text](https://github.com/MahimaKhatri/Lane-Detection/blob/master/Images/dev.png)
 
 ## Features
 
@@ -18,22 +18,27 @@ Description
 + **GrayScale**
 
 Grayscaling is the process of converting an image from other color spaces e.g. RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.
+
 ![alt text](https://github.com/MahimaKhatri/Lane-Detection/blob/master/Images/test_imagegray.jpg)
 
 + **Gaussian Blur**
 
 In image processing, a Gaussian blur (also known as Gaussian smoothing) is the result of blurring an image by a Gaussian function (named after mathematician and scientist Carl Friedrich Gauss).In Gaussian Blur operation, the image is convolved with a Gaussian filter instead of the box filter. The Gaussian filter is a low-pass filter that removes the high-frequency components.
+
 ![alt text](https://github.com/MahimaKhatri/Lane-Detection/blob/master/Images/test_imagegauss.jpg)
 
 + **Canney Edge**
 
 Canny Edge Detection is used to detect the edges in an image. It accepts a gray scale image as input and it uses a multistage algorithm.
+
 ![alt text](https://github.com/MahimaKhatri/Lane-Detection/blob/master/Images/test_imagecanny.jpg)
 
 + **Hough Transform**
 
 The Hough transform is a feature extraction technique used in image analysis, computer vision, and digital image processing. The purpose of the technique is to find imperfect instances of objects within a certain class of shapes by a voting procedure. This voting procedure is carried out in a parameter space, from which object candidates are obtained as local maxima in a so-called accumulator space that is explicitly constructed by the algorithm for computing the Hough transform.
+
 ![alt text](https://github.com/MahimaKhatri/Lane-Detection/blob/master/Images/test_imagehough.jpg)
+
 ![alt text](https://github.com/MahimaKhatri/Lane-Detection/blob/master/Images/test_imagehough_path.jpg)
 
 ### Video Demo
@@ -42,7 +47,8 @@ The Hough transform is a feature extraction technique used in image analysis, co
 ### Requirements
 
 
-### Developers
+## Developers
+
 <table>
 <tr align="center">
 
