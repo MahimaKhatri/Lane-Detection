@@ -1,5 +1,8 @@
 # Lane-Detection
 
+## Introduction
+One of the most fundamental tasks in computer vision for autonomous driving is lane line detection on the road. Lane lines are painted for humans to see and follow while driving. In a very similar way, an autonomous vehicle that uses human designed infrastructure, needs to see the lane markings to steer accordingly and follow the road trajectory.
+
 In this project, we will use Computer Vision to recognise lane lines in videos and pictures of roadways. One of the most essential traffic laws is to follow lane lines, therefore identifying them when developing models for autonomous vehicles is a crucial job. 
 
 ## Frontend
@@ -11,6 +14,8 @@ In this project, we will use Computer Vision to recognise lane lines in videos a
 ![alt text](https://github.com/MahimaKhatri/Lane-Detection/blob/master/Images/dev.png)
 
 ## Features
+
+Computer Vision algorithm is used to detect straight lane markings on road using OpenCV Image Processing, Color Masks, Canny Edge Detection and Hough Transform.
 
 ### Original Image
 ![alt text](https://github.com/MahimaKhatri/Lane-Detection/blob/master/Images/test_image.jpg)
@@ -43,6 +48,23 @@ The Hough transform is a feature extraction technique used in image analysis, co
 
 ### Video Demo
 
+## Tech Stack
+
++ Html
++ CSS
++ Flask
++ OpenCV
+
+## Running Instructions
+Open the terminal and type the following 
+```
+$ git clone https://github.com/MahimaKhatri/Lane-Detection.git
+$ cd Lane-Detection
+$ python3 -m venv lane-env
+$ source lane-env/bin/activate
+$ pip3 install -r requirements.txt
+$ python3 run.py
+```
 
 ### Requirements
 
