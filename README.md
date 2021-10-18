@@ -48,6 +48,8 @@ The Hough transform is a feature extraction technique used in image analysis, co
 
 ### Video Demo
 
+![alt text](https://github.com/MahimaKhatri/Lane-Detection/blob/master/Images/video_demo.gif)
+
 ## Tech Stack
 
 + Html
@@ -68,6 +70,12 @@ $ python3 run.py
 
 ### Requirements
 
+```
+ opencv_python==4.5.3.56
+ numpy==1.19.5
+ Werkzeug==1.0.1
+ Flask==1.1.2
+```
 
 ## Developers
 
